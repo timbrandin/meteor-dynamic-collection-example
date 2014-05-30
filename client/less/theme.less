@@ -1,0 +1,100 @@
+@import "variables.less";
+
+.section-heading.center {
+  text-align: center;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.section-title {
+  font-weight: 600;
+  color: #313140;
+  font-size: 24px;
+  line-height: 28px;
+  line-height: 1em !important;
+  display: inline-block;
+}
+
+.grid.fixed-height {
+  max-height: 28rem;
+}
+
+.grid {
+  font-size: 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  text-align: left;
+}
+
+.grid > * {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.grid > li.collection {
+  cursor: pointer;
+  display: inline-block;
+  height: 14rem;
+  width: 25%;
+}
+
+.intro blockquote {
+  padding-left: 2px;
+  border-left: none;
+}
+
+.intro .blockquote-reverse {
+  padding-right: 2px;
+  border-right: none;
+}
+
+.collection {
+  background: #ffffff;
+  border: 0.25em solid #eeeeee;
+  padding: 1.25em 1.25em 1.5em;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+
+.grid > li.collection .subtitle {
+  display: block;
+}
+
+.grid > li.collection .subtitle {
+  color: #cccccc;
+  margin-bottom: .5rem;
+}
+
+.collection .subtitle {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #999999;
+  margin-bottom: .5rem;
+  font-size: 12px;
+  line-height: 18px;
+  margin: -0.25em auto 1em -0.25em;
+}
+
+.grid > li.collection .title {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.grid > li.collection .title {
+  font-size: 18px;
+  line-height: 22px;
+  color: darken(@linkcolor, 20%);
+  text-decoration: none;
+}
+
+.collection .title {
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: .5em;
+}

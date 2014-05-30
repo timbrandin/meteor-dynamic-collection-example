@@ -1,0 +1,12 @@
+{
+  "packages": {
+    "easy-search": {},
+    "http-publish": {},
+    "iron-router": {},
+    "bootstrap-3": {},
+    "accounts-entry": {},
+    "gravatar": {},
+    "roles": {},
+    "moment": {}
+  }
+}

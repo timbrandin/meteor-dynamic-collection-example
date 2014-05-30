@@ -1,0 +1,15 @@
+<template name="home">
+  <section class="container">
+    <div class="section-heading center">
+      <h2 class="section-title">Collections</h2>
+    </div>
+    <ol class="grid fixed-height">
+      {{#each this}}
+      <li class="collection">
+        {{#if _owner}}<h4 class="subtitle">{{_owner}}</h4>{{/if}}
+        <a class="title" href="/c/{{name}}">{{name}}</a>
+      </li>
+      {{/each}}
+    </ol>
+  </section>
+</template>

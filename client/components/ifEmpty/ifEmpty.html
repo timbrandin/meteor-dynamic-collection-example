@@ -1,0 +1,7 @@
+<template name="ifEmpty">
+  {{#if isEmpty value}}
+    {{> UI.contentBlock}}
+  {{else}}
+    {{> UI.elseBlock}}
+  {{/if}}
+</template>

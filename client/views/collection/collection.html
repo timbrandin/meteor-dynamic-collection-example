@@ -1,0 +1,43 @@
+<template name="collection">
+  <div class="intro">
+    <div class="container">
+      {{#with collection}}
+      <h1>{{ucfirst name}}</h1>
+      <div class="row-fluid">
+
+        <blockquote class="col-xs-9">
+          <p>Upload some documents</p>
+          <pre>curl -XPOST "{{baseUrl}}api/{{name}}" -d '{"name": "Minestrone"}'</pre>
+        </blockquote>
+        <blockquote class="col-xs-3 blockquote-reverse text-right">
+          <h4>Documents</h4>
+          <span class="count">{{#if count}}{{count}}{{else}}0{{/if}}</span>
+        </blockquote>
+      </div>
+      {{/with}}
+    </div>
+  </div>
+  <section class="container">
+    <div class="section-heading center">
+      <h3 class="sectio-title">Documents</h3>
+    </div>
+    {{#ifEmpty documents}}
+    <div class="text-center text-muted">
+      &mdash; Boo hoo, no documents. &mdash;
+    </div>
+    {{else}}
+    <table class="table nav">
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each documents}}
+        <tr><td>{{name}}</td></tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{/ifEmpty}}
+  </section>
+</template>

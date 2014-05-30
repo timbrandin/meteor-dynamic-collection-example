@@ -1,0 +1,40 @@
+<template name="document">
+  <div class="intro">
+    <div class="container">
+      <h1>{{ucfirst name}}</h1>
+
+      <div class="row-fluid">
+        <blockquote class="col-xs-9">
+          <p>Update this document</p>
+          <pre>curl -XPUT "{{baseUrl}}api/{{collection}}/{{_id}}" -d '{"name": "{{name}}"}'</pre>
+          <p>Delete this document</p>
+          <pre>curl -XDELETE "{{baseUrl}}api/{{collection}}/{{_id}}"</pre>
+        </blockquote>
+        <blockquote class="col-xs-3 blockquote-reverse text-right">
+          <h4>Version</h4>
+          <span class="count">{{#if _version}}{{_version}}{{else}}-{{/if}}</span>
+          <h4>Updated</h4>
+          <span class="changed">{{#if _changed}}{{dateFromNow _changed}}{{else}}-{{/if}}</span>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <section class="container">
+    <div class="section-heading center">
+      <h3 class="section-title">Fields</h3>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each fields}}
+        <tr><td>{{k}}</td><td>{{v}}</td></tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+</template>
